@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo" />
         <module name="mybatis" />
-        <module name="MybatisDemo" />
         <module name="SpringBootMybatis" />
       </profile>
     </annotationProcessing>

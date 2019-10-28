@@ -9,18 +9,18 @@ import javax.annotation.PreDestroy;
 @EnableScheduling
 @SpringBootApplication
 @ComponentScan("com.example")
-public class Application {
+public class MybatisApplication {
 
   private static ConfigurableApplicationContext context;
 
   public static void main(String[] args) {
-    Application.context =
-    SpringApplication.run(Application.class, args);
+    MybatisApplication.context =
+    SpringApplication.run(MybatisApplication.class, args);
   }
 
   @PreDestroy
   public void close() {
-    Application.context.close();
+    MybatisApplication.context.close();
   }
 
 }

@@ -4,7 +4,21 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example">
-    <select id="getStudentCount" resultType="Integer">
-            select count(*) from galaxy.user;
+    <select id="getUserCount" resultType="Integer">
+      SELECT count(*) FROM galaxy.user;
     </select>
+    <!--parameterType配置入参类型的路径-->
+    <insert id="addUser" parameterType="com.example.bean.User">
+      INSERT INTO galaxy.user(id,username,password,email,create_time)
+        VALUES (#{id},#{username},#{password},#{email},#{create_time});
+    </insert>
+
+    <update id="updateUser" parameterType="com.example.bean.User">
+      UPDATE galaxy.user SET username=#{username},password=#{password},email=#{email}
+        WHERE id=#{id};
+    </update>
+
+    <delete id="deleteUser" parameterType="Integer">
+      DELETE FROM galaxy.user WHERE id=#{id};
+    </delete>
 </mapper>

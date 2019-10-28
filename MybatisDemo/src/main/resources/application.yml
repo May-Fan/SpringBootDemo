@@ -19,7 +19,7 @@ spring:
 
 mybatis:
   #配置启动mybatis时所需的java bean的路径，用于映射
-  type-aliases-package: com.example.model
+  type-aliases-package: com.example.bean
   #配置存放sql语句的路径
   mapper-locations:
     - mapper/*
