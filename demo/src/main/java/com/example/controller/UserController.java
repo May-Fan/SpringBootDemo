@@ -33,7 +33,7 @@ public class UserController {
     template.insert("addUser",user);
     return "新增成功！";
   }
-  @PostMapping("/addUsers")
+  @GetMapping("/addUsers")
   public @ResponseBody Object addUsers() {
     List<String> array = new ArrayList<>();
     array.add("mary");
