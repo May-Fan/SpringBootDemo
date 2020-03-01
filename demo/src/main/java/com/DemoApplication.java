@@ -1,4 +1,5 @@
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
+package com;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
