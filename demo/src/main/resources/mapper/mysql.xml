@@ -5,20 +5,17 @@
 
 <mapper namespace="com.example">
     <select id="getUserCount" resultType="Integer">
-      SELECT count(*) FROM galaxy.user;
+        select count(*) from galaxy.user;
     </select>
-    <!--parameterType配置入参类型的路径-->
     <insert id="addUser" parameterType="com.example.bean.User">
-      INSERT INTO galaxy.user(id,username,password,email,create_time)
-        VALUES (#{id},#{username},#{password},#{email},#{create_time});
+        insert into galaxy.user(id,username,password,email,create_time)
+        value(#{id},#{username},#{password},#{email},#{create_time});
     </insert>
-
     <update id="updateUser" parameterType="com.example.bean.User">
-      UPDATE galaxy.user SET username=#{username},password=#{password},email=#{email}
-        WHERE id=#{id};
+        update galaxy.user set id=#{id},username=#{username},password=#{password},
+        email=#{email},create_at=#{create_time};
     </update>
-
     <delete id="deleteUser" parameterType="Integer">
-      DELETE FROM galaxy.user WHERE id=#{id};
+        delete from galaxy.user where id=#{id};
     </delete>
 </mapper>

@@ -47,10 +47,10 @@ public class PostController {
       if(cookie.getName().equals("admin") && cookie.getValue().equals("123456")
         && user.getId().equals(27)) {
         user.setId(1);
-        user.setName("超级管理员");
-        user.setSex("female");
-        user.setHeight(1.76);
-        user.setPhone("10086");
+        user.setUsername("超级管理员");
+        user.setPassword("123456");
+        user.setEmail("fan@skio.cn");
+        user.setCreate_time("2020-02-01");
 
         return user.toString();
       }

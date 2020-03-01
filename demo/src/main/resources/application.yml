@@ -1,19 +1,18 @@
 server:
-  port: 8080
+  port: 9090
 
-#配置日志文件输出路径、指定文件名
+#配置日志文件输出路径
 logging:
   file:
-    path: logs
-    name: logs.log
+    path: ./logs
 
 spring:
   application:
-    name: TestDemo
-#配置mysql数据库
+    name: dev
+  #配置mysql数据库
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost/galaxy
+    url: jdbc:mysql://localhost:3306/galaxy
     username: root
     password:
 
