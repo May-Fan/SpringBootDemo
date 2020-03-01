@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 6868
 
 #配置日志文件输出路径
 logging:
